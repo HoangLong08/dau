@@ -1,0 +1,56 @@
+{
+	"aa":[
+		{	
+			"id": "1",
+			"faculty_name": "S0hPQSBLSeG6vk4gVFLDmkM=",
+			"number_student": "4470"
+		},
+		{	
+			"id": "2",
+			"faculty_name": "S0hPQSBYw4JZIEThu7BORw==",
+			"number_student": "1240"
+		},
+			{"id": "3","faculty_name": "S0hPQSBD4bqmVSDEkMav4bucTkc=","number_student": "869"},{"id": "4","faculty_name": "S0hPQSBLSU5IIFThur4=","number_student": "1493"},{"id": "5","faculty_name": "S0hPQSBDw5RORyBOR0jhu4YgVEjDlE5HIFRJTg==","number_student": "100"},{"id": "6","faculty_name": "S0hPQSDEkEnhu4ZOIMSQSeG7hk4gVOG7rA==","number_student": "165"},{"id": "7","faculty_name": "S0hPQSBOR0/huqBJIE5H4buu","number_student": "898"},{"id": "8","faculty_name": "S0hPQSBEVSBM4buKQ0g=","number_student": "465"}],
+	"faculties": [
+		{
+			"id": 1,
+			"href": "./Facult.php?facultId=1",
+			"title": "KHOA KIẾN TRÚC"
+		},
+		{
+			"id": 2,
+			"href": "./Facult.php?facultId=2",
+			"title": "KHOA XÂY DỰNG"
+		},
+		{
+			"id": 3,
+			"href": "./Facult.php?facultId=3",
+			"title": "KHOA CẦU ĐƯỜNG"
+		},
+		{
+			"id": 4,
+			"href": "./Facult.php?facultId=4",
+			"title": "KHOA KINH TẾ"
+		},
+		{
+			"id": 5,
+			"href": "./Facult.php?facultId=5",
+			"title": "KHOA CÔNG NGHỆ THÔNG TIN"
+		},
+		{
+			"id": 6,
+			"href": "./Facult.php?facultId=6",
+			"title": "KHOA KỸ THUẬT ĐIỆN, ĐIỆN TỬ"
+		},
+		{
+			"id": 7,
+			"href": "./Facult.php?facultId=7",
+			"title": "KHOA NGOẠI NGỮ"
+		},
+		{
+			"id": 8,
+			"href": "./Facult.php?facultId=8",
+			"title": "KHOA DU LỊCH"
+		}
+	]
+}
