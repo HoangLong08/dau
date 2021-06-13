@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2021 at 05:29 PM
+-- Generation Time: Jun 13, 2021 at 06:36 AM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.5
+-- PHP Version: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,6 +27,14 @@ DELIMITER $$
 --
 CREATE DEFINER=`root`@`localhost` PROCEDURE `procedureAllInforFacult` ()  BEGIN
     SELECT * FROM facultis INNER JOIN faculty_details ON faculty_details.faculty_id = facultis.id WHERE facultis.disable = 1;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `procedureChartClub` ()  BEGIN
+SELECT year(club_videos.create_at), COUNT(club_videos.id), COUNT(club_even_newfeeds.id) FROM club_videos, club_even_newfeeds  GROUP BY year(club_videos.create_at);
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `procedureChartPost` ()  BEGIN
+SELECT facultis.id, facultis.faculty_name ,COUNT(faculty_newfeeds.faculty_id) FROM facultis INNER JOIN faculty_newfeeds ON faculty_newfeeds.faculty_id = facultis.id GROUP BY facultis.id, facultis.faculty_name;
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `procedureChartStudent` ()  BEGIN
