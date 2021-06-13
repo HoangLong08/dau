@@ -1,16 +1,17 @@
 <?php
 include "./Components/Commom/Header.php";
-
+require './Php/connect.php';
 include './Constant/variableConst.php';
 include './Components/Commom/Sidebar.php';
 
-$curPageName = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
+// $curPageName = substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1);
 
 $facultId  =  $_GET['facultId'];
-
-// $resPassOld = executeQuery($conn, "SELECT * FROM facultis WHERE id = '".$_SESSION['idUser']."'");
-// $rowCheckPassOld = mysqli_fetch_array($resPassOld);
-
+$result = executeQuery($conn, "CALL procedureFaculty('$facultId')");
+print_r($result);
+while($row = mysqli_fetch_array($result)) {
+		echo "ss";
+	}
 ?>
 <div class="content">
 	<div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -39,8 +40,6 @@ $facultId  =  $_GET['facultId'];
 					<a href="./Partner.php">
 						Đối tác
 					</a>
-
-
 				</div>
 			</div>
 		</div>
@@ -142,7 +141,6 @@ $facultId  =  $_GET['facultId'];
 		</div>
 	</div>
 </div>
-
 <script src="./Asset/Js/main.js"></script>
 <script src="./ckeditor5-build-classic/ckeditor.js"></script>
 <script>
