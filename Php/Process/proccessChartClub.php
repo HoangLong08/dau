@@ -5,7 +5,7 @@ if(!isset($_SESSION)) {
 	session_start(); 
 } 
 
-$result = executeQuery($conn, "CALL procedureChartStudent()");
+$result = executeQuery($conn, "CALL procedureChartClub()");
 $myArray = [];
 $tmp = "[";
 $count = mysqli_num_rows($result);
@@ -13,9 +13,9 @@ $countMain = 0;
 while ($row = mysqli_fetch_array($result)) {
 	$countMain++;
 	$tmp .= "{";
-	$tmp .= '"id": "' . $row['faculty_id'] . '",';
-	$tmp .= '"faculty_name": "' . base64_decode($row['faculty_name']) . '",';
-	$tmp .= '"number_student": "' . $row['sum(number_student)']. '"';
+	$tmp .= '"year": "' . $row['year(club_videos.create_at)'] . '",';
+	$tmp .= '"video": "' . $row['COUNT(club_videos.id)'] . '",';
+	$tmp .= '"even": "' . $row['COUNT(club_even_newfeeds.id)']. '"';
 	// array_push($myArray, (object)[
 	// 	'id' => $row['faculty_id'],
 	// 	'faculty_name' => $row['faculty_name'],
